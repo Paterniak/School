@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wystąpienia</title>
+</head>
+<body>
+    <p id="wylosowaneLiczby"></p>
+    <p>Wystąpienia:</p>
+    <p id="wystapienia"></p>
+
+    <script>
+        function generujLiczby() {
+            let liczby = [];
+            let licznik = {};
+            
+            for (let i = 0; i < 20; i++) {
+                let liczba = Math.floor(Math.random() * 10) + 1;
+                liczby.push(liczba);
+                licznik[liczba] = (licznik[liczba] || 0) + 1;
+            }
+            
+
+            document.getElementById("wylosowaneLiczby").innerText = "Wylosowane liczby: " + liczby.join(" ");
+            
+
+            let tekstWystapien = "";
+            for (let i = 1; i <= 10; i++) {
+                tekstWystapien += i + " - " + (licznik[i] || 0) + "<br>";
+            }
+            document.getElementById("wystapienia").innerHTML = tekstWystapien;
+        }
+        
+        generujLiczby();
+    </script>
+</body>
+</html>
