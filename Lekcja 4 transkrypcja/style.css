@@ -1,0 +1,36 @@
+* {
+    text-align: center;
+}
+
+div {
+    width: 50%;
+    height: 550px;
+    float: left;
+}
+
+img {
+    padding: 3px;
+    margin: 10px;
+    border: 2px dashed SlateBlue;
+    height: 400px;
+}
+
+a {
+    color: white;
+}
+
+button {
+    background-color: SlateBlue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: Indigo;
+}
+
+input[type="range"] {
+	width: 70%;
+}

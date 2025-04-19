@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macierz 3x3</title>
+</head>
+<body>
+    <p>Macierz:</p>
+    <form id="form">
+        <input type="text" id="a11"><input type="text" id="a12"><input type="text" id="a13"><br>
+        <input type="text" id="a21"><input type="text" id="a22"><input type="text" id="a23"><br>
+        <input type="text" id="a31"><input type="text" id="a32"><input type="text" id="a33"><br>
+    </form><br><br>
+
+    <p>Wyznacznik macierzy A</p>
+    <p>Det A=<span id="wynik"></span></p>
+  
+    <button onclick="oblicz()">Oblicz</button>
+    <button onclick="wyczysc()">Wyczyść</button>
+
+    <script>
+     function oblicz() {
+        let wynik = document.getElementById("wynik");
+        let a11 = parseInt(document.getElementById('a11').value);
+        let a12 = parseInt(document.getElementById('a12').value);
+        let a13 = parseInt(document.getElementById('a13').value);
+
+        let a21 = parseInt(document.getElementById('a21').value);
+        let a22 = parseInt(document.getElementById('a22').value);
+        let a23 = parseInt(document.getElementById('a23').value);
+
+        let a31 = parseInt(document.getElementById('a31').value);
+        let a32 = parseInt(document.getElementById('a32').value);
+        let a33 = parseInt(document.getElementById('a33').value);
+
+        liczenie = a11*a22*a33 + a12*a23*a31 + a13*a21*a32 - a11*a23*a32 - a12*a21*a33 - a13*a22*a31; 
+        wynik.innerHTML = liczenie;
+     }
+
+     function wyczysc(){
+        document.getElementById("form").reset();
+        document.getElementById("wynik").innerHTML="";
+     }
+    </script>
+</body>
+</html>
