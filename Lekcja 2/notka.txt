@@ -1,4 +1,0 @@
-Skrypt ma byc w javascript oraz PHP(xampp pobierz)
-
-w JS zrob bez dokument write
-w PHP uzyj echo chyba
